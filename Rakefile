@@ -4,7 +4,7 @@ require 'rake/testtask'
 require 'rcov/rcovtask'
 require 'spec/rake/spectask'
 
-MAIN      = "README"
+MAIN      = "README.markdown"
 LIBS      = FileList.new( File.basename(Dir.pwd) , 'lib' )
 SRCFILES  = FileList.new( '*.rb', *LIBS.map { |l| l + "/**/*.rb" } )
 TESTFILES = "test/unit/test*.rb"
