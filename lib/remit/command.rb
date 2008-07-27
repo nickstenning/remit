@@ -1,6 +1,6 @@
 require 'lib/remit'
-require 'rubygems'
-require 'duration'
+#require 'rubygems'
+#require 'duration'
 
 module Remit
   class Command
@@ -44,7 +44,7 @@ module Remit
     end
     def timer_stats
       "running: " + (timer.ticking? ? "yes" : "no") + "\n" +
-      "   time: " + ::Duration.new(timer.time).to_s
+      "   time: #{sprintf("%0.02f", timer.time / 3600)} hours" 
     end
     def unknown_timer
       "Unknown timer. Run `#{File.basename($0)} #{@timer_name} start` to create it."
